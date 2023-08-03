@@ -1,0 +1,14 @@
+### STAGE 1: Build ###
+FROM node:14
+# RUN npm cache clean --force
+WORKDIR /fe
+COPY package.json package-lock.json ./
+RUN npm install
+COPY . .
+EXPOSE 4000
+CMD npm run start
+
+
+
+
+
